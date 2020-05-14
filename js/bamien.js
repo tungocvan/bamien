@@ -1825,6 +1825,7 @@ function loadPage() {
             break;
     }
     document.getElementById("fixtel").innerHTML = fixtel();
+    document.getElementById("chatzalo").innerHTML = chatzalo();
     
 }
 function loadHeaderTopNav() {
@@ -2747,5 +2748,13 @@ function fixtel(){
     `;
     return xhtml;
 }
-
+function chatzalo() {
+    let xhtml=`
+    <div class="float-contact">
+    <button class="chat-zalo"><a href="http://zalo.me/0903971949" target="_blank">Chat Zalo</a></button>
+    <button class="chat-face"><a href="http://m.me/1247395928740970" target="_blank">Chat Facebook</a></button>
+    </div>
+    `;
+    return xhtml;
+}
 loadPage();
