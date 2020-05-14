@@ -15,7 +15,7 @@ function loadHeader() {
     </header> 
     `;
     return xhtml;
-}
+} 
 function loadHeaderLeft() {
     let xhtml=`
     <div class="col-xl-2 col-lg-3 col-md-12">
@@ -984,7 +984,7 @@ function loadMainProductGrid() {
         <aside class="col-md-3">
             
     <div class="card">
-        <article class="filter-group">
+        <article>
             <header class="card-header">
                 <a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
                     <i class="icon-control fa fa-chevron-down"></i>
@@ -1008,7 +1008,7 @@ function loadMainProductGrid() {
                 </div> <!-- card-body.// -->
             </div>
         </article> <!-- filter-group  .// -->
-        <article class="filter-group">
+        <article>
             <header class="card-header">
                 <a href="#" data-toggle="collapse" data-target="#collapse_2" aria-expanded="true" class="">
                     <i class="icon-control fa fa-chevron-down"></i>
@@ -1045,7 +1045,7 @@ function loadMainProductGrid() {
         </div> <!-- card-body.// -->
             </div>
         </article> <!-- filter-group .// -->
-        <article class="filter-group">
+        <article>
             <header class="card-header">
                 <a href="#" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" class="">
                     <i class="icon-control fa fa-chevron-down"></i>
@@ -1069,7 +1069,7 @@ function loadMainProductGrid() {
                 </div><!-- card-body.// -->
             </div>
         </article> <!-- filter-group .// -->
-        <article class="filter-group">
+        <article>
             <header class="card-header">
                 <a href="#" data-toggle="collapse" data-target="#collapse_4" aria-expanded="true" class="">
                     <i class="icon-control fa fa-chevron-down"></i>
@@ -1100,7 +1100,7 @@ function loadMainProductGrid() {
             </div><!-- card-body.// -->
             </div>
         </article> <!-- filter-group .// -->
-        <article class="filter-group">
+        <article>
             <header class="card-header">
                 <a href="#" data-toggle="collapse" data-target="#collapse_5" aria-expanded="false" class="">
                     <i class="icon-control fa fa-chevron-down"></i>
@@ -1343,7 +1343,7 @@ function loadMainProductList() {
         <aside class="col-md-3">
             
     <div class="card">
-        <article class="filter-group">
+        <article>
             <header class="card-header">
                 <a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
                     <i class="icon-control fa fa-chevron-down"></i>
@@ -1367,7 +1367,7 @@ function loadMainProductList() {
                 </div> <!-- card-body.// -->
             </div>
         </article> <!-- filter-group  .// -->
-        <article class="filter-group">
+        <article>
             <header class="card-header">
                 <a href="#" data-toggle="collapse" data-target="#collapse_2" aria-expanded="true" class="">
                     <i class="icon-control fa fa-chevron-down"></i>
@@ -1404,7 +1404,7 @@ function loadMainProductList() {
         </div> <!-- card-body.// -->
             </div>
         </article> <!-- filter-group .// -->
-        <article class="filter-group">
+        <article>
             <header class="card-header">
                 <a href="#" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" class="">
                     <i class="icon-control fa fa-chevron-down"></i>
@@ -1428,7 +1428,7 @@ function loadMainProductList() {
                 </div><!-- card-body.// -->
             </div>
         </article> <!-- filter-group .// -->
-        <article class="filter-group">
+        <article>
             <header class="card-header">
                 <a href="#" data-toggle="collapse" data-target="#collapse_4" aria-expanded="true" class="">
                     <i class="icon-control fa fa-chevron-down"></i>
@@ -1459,7 +1459,7 @@ function loadMainProductList() {
             </div><!-- card-body.// -->
             </div>
         </article> <!-- filter-group .// -->
-        <article class="filter-group">
+        <article>
             <header class="card-header">
                 <a href="#" data-toggle="collapse" data-target="#collapse_5" aria-expanded="false" class="">
                     <i class="icon-control fa fa-chevron-down"></i>
@@ -1824,6 +1824,8 @@ function loadPage() {
         //   console.log('default');            
             break;
     }
+    document.getElementById("fixtel").innerHTML = fixtel();
+    
 }
 function loadHeaderTopNav() {
     let xhtml=`
@@ -1912,74 +1914,15 @@ function loadHeaderBaMien(){
     return xhtml;
 } 
 function loadMainLeftBaMien(){
-    let xhtml=`<aside class="col-md-3">
-    <div class="card">
-    <article class="filter-group">
-        <header class="card-header">
-            <a href="#" class="">            
-                <h6 class="title">ĐẶC SẢN BA MIỀN</h6>
-            </a>
-        </header>
-        <div class="show">
-            <div class="card-body">              
-
-                <ul class="list-menu">
-                    <li><a href="/">Nước ép trái cây Vinut </a></li>
-                    <li><a href="/">Bánh tráng khô bò</a></li>
-                    <li><a href="/">Bánh tráng mắm ruốt </a></li>
-              
-                </ul>
-            </div>
-            <!-- card-body.// -->
-        </div>
-    </article>
-    <article class="filter-group">
-        <header class="card-header">
-            <a href="#">
-                <h6 class="title">CÔNG NGHỆ TIỆN ÍCH</h6>
-            </a>
-        </header>
-        <div class="show">
-            <div class="card-body">               
-
-                <ul class="list-menu">
-                    <li><a href="/">Đèn Led thông minh </a></li>
-                    <li><a href="/">D/Cụ Sức khỏe/Làm đẹp</a></li>
-                    <li><a href="/">Đồ dùng gia dụng</a></li>
-                    <li><a href="/">Đồ chơi công nghệ   </a></li>
-                    <li><a href="/">Thiết bị sửa chữa</a></li>
-
-                </ul>
-            </div>
-            <!-- card-body.// -->
-        </div>
-    </article>
-    <article class="filter-group">
-		<header class="card-header">
-			<a href="#">
-				<h6 class="title">TRA CỨU GIÁ</h6>
-			</a>
-		</header>
-		<div class="show">
-			<div class="card-body">
-				<input type="range" class="custom-range" min="0" max="100" name="">
-				<div class="form-row">
-				<div class="form-group col-md-6">
-				  <label>Min</label>
-				  <input class="form-control" placeholder="$0" type="number">
-				</div>
-				<div class="form-group text-right col-md-6">
-				  <label>Max</label>
-				  <input class="form-control" placeholder="$1,0000" type="number">
-				</div>
-				</div> <!-- form-row.// -->
-				<button class="btn btn-block btn-primary">Apply</button>
-			</div><!-- card-body.// -->
-		</div>
-	</article>
-    <!-- filter-group .// -->
-</div>
-</aside>
+    let xhtml=`
+    <aside id="leftBamien" class="col-md-3">
+    
+    ${menusanpham()}
+    ${congnghetienich()}
+    ${tracuu()}
+    ${tinmoidang()}
+    ${quangcao()}
+    </aside>    
     `;
     return xhtml;
 }
@@ -2644,4 +2587,165 @@ function dieukhoan() {
     `;
     document.getElementById("main").innerHTML = xhtml;
 }
+function tinmoidang(){
+    let xhtml=`
+    <div class="card">
+    <article>
+        <header class="card-header">
+            <a href="#" class="">            
+                <h6 class="title">TIN MỚI ĐĂNG</h6>
+            </a>
+        </header>
+        <div class="show">
+            <div class="card-body">              
+
+                <ul class="list-menu">
+                    <li><a href="/">Tin mới nhất</a></li>
+                    <li><a href="/">Tin tức</a></li>
+                    <li><a href="/">Tin trong nước</a></li>
+              
+                </ul>
+            </div>
+            <!-- card-body.// -->
+        </div>
+    </article>  
+    </div>
+
+    `;
+    return xhtml;
+}
+function menusanpham(){
+    let xhtml=`
+    <div class="card">
+    <article>
+        <header class="card-header">
+            <a href="#" class="">            
+                <h6 class="title">ĐẶC SẢN BA MIỀN</h6>
+            </a>
+        </header>
+        <div class="show">
+            <div class="card-body">              
+
+                <ul class="list-menu">
+                    <li><a href="/">Nước ép trái cây Vinut </a></li>
+                    <li><a href="/">Bánh tráng khô bò</a></li>
+                    <li><a href="/">Bánh tráng mắm ruốt </a></li>
+              
+                </ul>
+            </div>
+            <!-- card-body.// -->
+        </div>
+    </article>   
+    </div>
+    `;
+    return xhtml;
+}
+function congnghetienich(){
+    let xhtml=`
+    <div class="card">
+    <article>
+    <header class="card-header">
+        <a href="#">
+            <h6 class="title">CÔNG NGHỆ TIỆN ÍCH</h6>
+        </a>
+    </header>
+    <div class="show">
+        <div class="card-body">               
+
+            <ul class="list-menu">
+                <li><a href="/">Đèn Led thông minh </a></li>
+                <li><a href="/">D/Cụ Sức khỏe/Làm đẹp</a></li>
+                <li><a href="/">Đồ dùng gia dụng</a></li>
+                <li><a href="/">Đồ chơi công nghệ   </a></li>
+                <li><a href="/">Thiết bị sửa chữa</a></li>
+
+            </ul>
+        </div>
+        <!-- card-body.// -->
+    </div>
+</article>
+</div>
+    `;
+    return xhtml;
+}
+function tracuu(){
+    let xhtml=`
+    <div class="card">
+    <article>
+    <header class="card-header">
+        <a href="#">
+            <h6 class="title">TRA CỨU GIÁ</h6>
+        </a>
+    </header>
+    <div class="show">
+        <div class="card-body">
+            <input type="range" class="custom-range" min="0" max="100" name="">
+            <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Min</label>
+              <input class="form-control" placeholder="$0" type="number">
+            </div>
+            <div class="form-group text-right col-md-6">
+              <label>Max</label>
+              <input class="form-control" placeholder="$1,0000" type="number">
+            </div>
+            </div> <!-- form-row.// -->
+            <button class="btn btn-block btn-primary">Apply</button>
+        </div><!-- card-body.// -->
+    </div>
+</article>
+    </div>
+    `;
+    return xhtml;
+}
+function quangcao(){
+    let xhtml=`
+    <div class="card">
+    <article>
+    <header class="card-header">
+        <a href="#">
+            <h6 class="title">ĐỐI TÁC - QUẢNG CÁO</h6>
+        </a>
+    </header>
+    <div class="card-banner" style="height: 250px; background-image: url('/images/banners/banner8.jpg');">
+    <article class="caption bottom">
+        <h5 class="card-title">Watches</h5>
+        <p>No matter how far along you are in your sophistication as an amateur.</p>
+    </article>
+    </div>
+    <div class="card-banner" style="height: 250px; background-image: url('/images/banners/banner8.jpg');">
+    <article class="caption bottom">
+        <h5 class="card-title">Watches</h5>
+        <p>No matter how far along you are in your sophistication as an amateur.</p>
+    </article>
+    </div>
+    <div class="card-banner" style="height: 250px; background-image: url('/images/banners/banner8.jpg');">
+    <article class="caption bottom">
+        <h5 class="card-title">Watches</h5>
+        <p>No matter how far along you are in your sophistication as an amateur.</p>
+    </article>
+    </div>
+    `;
+    return xhtml;
+}
+function fixtel(){
+    let xhtml=`
+    <div class="fix_tel">
+    <div class="ring-alo-phone ring-alo-green ring-alo-show" id="ring-alo-phoneIcon" style="right: 150px; bottom: -12px;">
+      <div class="ring-alo-ph-circle"></div>
+      <div class="ring-alo-ph-circle-fill"></div>
+      <div class="ring-alo-ph-img-circle">
+        <a href="tel:0903971949">
+          <img class="lazy"  src="/images/phone-ring.png" >   
+        </a>
+      </div>
+    </div>
+    <div class="tel">
+        <p class="fone">0903.971.949</p>
+    </div>
+    </div>
+    `;
+    return xhtml;
+}
+
 loadPage();

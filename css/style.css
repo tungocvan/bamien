@@ -4,3 +4,22 @@
 #contactForm {
     width:99%
 }
+header.card-header{
+    background-color: #3167eb!important;
+}
+header.card-header a{
+    color:white!important;
+}
+#leftBamien .card{
+    margin-bottom: 10px;
+}
+#leftBamien ul li::before{
+    content: "■";
+    color: red;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    font-size: 10px;
+    margin-right: 10px;
+}
